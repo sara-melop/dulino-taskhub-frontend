@@ -22,6 +22,8 @@ export default function TasksPage() {
     const token = localStorage.getItem('token')
     if (!token) {
       router.replace('/login')
+    } else {
+      fetchTasks()
     }
   }, [router, fetchTasks])
 
